@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shyee Hub </title>
+
+
+	<!-- Site favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="vendors/images/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="vendors/images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="vendors/images/favicon-16x16.png">
+
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="vendors/styles/core.css">
+	<link rel="stylesheet" type="text/css" href="vendors/styles/icon-font.min.css">
+	<link rel="stylesheet" type="text/css" href="src/plugins/datatables/css/dataTables.bootstrap4.min.css">
+	<link rel="stylesheet" type="text/css" href="src/plugins/datatables/css/responsive.bootstrap4.min.css">
+	<link rel="stylesheet" type="text/css" href="vendors/styles/style.css">
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119386393-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-119386393-1');
+	</script>
+</head>
+<body>
+	<div class="pre-loader">
+		<div class="pre-loader-box">
+			<div class="loader-logo"><img src="vendors/images/logo.png" alt=""></div>
+			<div class='loader-progress' id="progress_div">
+				<div class='bar' id='bar1'></div>
+			</div>
+			<div class='percent' id='percent1'>0%</div>
+			<div class="loading-text">
+				Loading...
+			</div>
+		</div>
+	</div>
+
+	<div class="header">
+		<div class="header-left">
+			<div class="menu-icon dw dw-menu"></div>
+			<div class="search-toggle-icon dw dw-search2" data-toggle="header_search"></div>
+			<div class="header-search">
+				<form>
+					<div class="form-group mb-0">
+						<i class="dw dw-search2 search-icon"></i>
+						<input type="text" class="form-control search-input" placeholder="Search Here">
+					
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="header-right">
+			<div class="dashboard-setting user-notification">
+				<div class="dropdown">
+					<a class="dropdown-toggle no-arrow" href="javascript:;" data-toggle="right-sidebar">
+						<i class="dw dw-settings2"></i>
+					</a>
+				</div>
+			</div>
+			<div class="user-notification">
+				<div class="dropdown">
+					<a class="dropdown-toggle no-arrow" href="#" role="button" data-toggle="dropdown">
+						<i class="icon-copy dw dw-notification"></i>
+						<span class="badge notification-active"></span>
+					</a>
+					<div class="dropdown-menu dropdown-menu-right">
+						<div class="notification-list mx-h-350 customscroll">
+							<ul>
+							
+								<li>
+									<a href="#">
+										<img src="vendors/images/s.svg" alt="">
+										<h3>Shyee Designs </h3>
+										<p> 
+
+										</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="vendors/images/photo3.jpg" alt="">
+										<h3>John Doe</h3>
+										<p>
+											Kindly recheck activations for Shyee Designs
+										</p>
+									</a>
+								</li>
+							
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="user-info-dropdown">
+				<div class="dropdown">
+					<a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+						<span class="user-icon">
+							<img src="vendors/images/photo1.jpg" alt="">
+						</span>
+						<span class="user-name">Sheila Kabiro</span>
+					</a>
+					<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+						<a class="dropdown-item" href="profile.html"><i class="dw dw-user1"></i> Profile</a>
+	
+						<a class="dropdown-item" href="faq.html"><i class="dw dw-help"></i> Help</a>
+						<a class="dropdown-item" href="login.html"><i class="dw dw-logout"></i> Log Out</a>
+					</div>
+				</div>
+			</div>
+		
+		</div>
+	</div>
+
+
+
+	<div class="left-side-bar">
+		<div class="brand-logo">
+			<a href="index.html">
+				<h1> Shyee Hub</h1>
+			</a>
+			<div class="close-sidebar" data-toggle="left-sidebar-close">
+				<i class="ion-close-round"></i>
+			</div>
+		</div>
+		<div class="menu-block customscroll">
+			<div class="sidebar-menu">
+				<ul id="accordion-menu">
+			
+					<li>
+						<a href="calendar.html" class="dropdown-toggle no-arrow">
+							<span class="micon dw dw-home"></span><span class="mtext">Home </span>
+						</a>
+					</li>
+
+					<li>
+						<a href="calendar.html" class="dropdown-toggle no-arrow">
+							<span class="micon dw dw-admin"></span><span class="mtext">Admin </span>
+						</a>
+					</li>
+					
+
+
+					<li>
+						<a href="calendar.html" class="dropdown-toggle no-arrow">
+							<span class="micon dw dw-calendar1"></span><span class="mtext">Clients </span>
+						</a>
+					</li>
+					
+					
+					</li>
+					<li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
+							<span class="micon dw dw-active"></span><span class="mtext">Activations</span>
+						</a>
+						<ul class="submenu">
+							<li><a href="basic-table.html">Current activations</a></li>
+							<li><a href="datatable.html">All Activations</a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="calendar.html" class="dropdown-toggle no-arrow">
+							<span class="micon dw dw-calendar1"></span><span class="mtext">Divisions </span>
+						</a>
+					</li>
+					<li class="dropdown">
+						<a href="javascript:;" class="dropdown-toggle">
+							<span class="micon dw dw-apartment"></span><span class="mtext"> Users </span>
+						</a>
+						<ul class="submenu">
+							<li> <a href="#"> Project Managers </a></li>
+							<li><a href="ui-buttons.html">Team Leaders </a></li>
+							<li><a href="ui-cards.html">Brand Ambassadors</a></li>
+					
+						</ul>
+					</li>
+			
+					<li>
+						<a href="sitemap.html" class="dropdown-toggle no-arrow">
+							<span class="micon dw dw-diagram"></span><span class="mtext">Expenses </span>
+						</a>
+					</li>
+					<li>
+						<a href="chat.html" class="dropdown-toggle no-arrow">
+							<span class="micon dw dw-chat3"></span><span class="mtext">Leave Management </span>
+						</a>
+					</li>
+					<li>
+						<a href="invoice.html" class="dropdown-toggle no-arrow">
+							<span class="micon dw dw-invoice"></span><span class="mtext">Quotes</span>
+						</a>
+					</li>
+					<li>
+						<div class="dropdown-divider"></div>
+					</li>
+					<li>
+						<div class="sidebar-small-cap">Others</div>
+					</li>
+					<li>
+						<a href="#" class="dropdown-toggle no-arrow">
+							<span class="micon dw dw-invoice"></span><span class="mtext">Performance Analysis</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="main-container">
+		<div class="pd-ltr-20">
+			<div class="card-box pd-20 height-100-p mb-30">
+				<div class="row align-items-center">
+					<div class="col-md-4">
+						<img src="vendors/images/banner-img.png" alt="">
+					</div>
+					<div class="col-md-8">
+						<h4 class="font-20 weight-500 mb-10 text-capitalize">
+							Welcome back <div class="weight-600 font-30 text-blue">Sheila Kabiro!</div>
+						</h4>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+			
+				<div class="col-xl-4 mb-30">
+					<div class="card-box height-100-p widget-style1">
+						<div class="d-flex flex-wrap align-items-center">
+						
+							<div class="widget-data">
+								<div class="h4 mb-0">39</div>
+								<div class="weight-600 font-14">Total Activations</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-4 mb-30">
+					<div class="card-box height-100-p widget-style1">
+						<div class="d-flex flex-wrap align-items-center">
+							
+							<div class="widget-data">
+								<div class="h4 mb-0">630</div>
+								<div class="weight-600 font-14">Users</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-4 mb-30">
+					<div class="card-box height-100-p widget-style1">
+						<div class="d-flex flex-wrap align-items-center">
+						
+							<div class="widget-data">
+								<div class="h4 mb-0">3</div>
+								<div class="weight-600 font-14">Clients</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+					<div class="row">
+						<div class="col-md-6 col-sm-12">
+							<div class="title">
+								<h4>Admin Dashboard</h4>
+							</div>
+							<nav aria-label="breadcrumb" role="navigation">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item"><a href="index.html">Home</a></li>
+									<li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+								</ol>
+							</nav>
+						</div>
+						<div class="col-md-6 col-sm-12 text-right">
+							<div class="dropdown">
+								<a class="btn btn-primary dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+									January 2021
+								</a>
+								<div class="dropdown-menu dropdown-menu-right">
+									<a class="dropdown-item" href="#">Activations</a>
+									<a class="dropdown-item" href="#">Users</a>
+									<a class="dropdown-item" href="#">Clients</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+			<!-- Export Datatable start -->
+			<div class="card-box mb-30">
+				<div class="pd-20">
+					<h4 class="text-blue h4">Recent Activations</h4>
+				</div>
+				<div class="pb-20">
+					<table class="table hover multiple-select-row data-table-export nowrap">
+						<thead>
+							<tr>
+								<th class="table-plus datatable-nosort">Name</th>
+							
+							
+								<th>Start Date</th>
+								<th>
+									End Date
+								</th>
+								<th>Reports</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="table-plus">Safaricom Alrazaq Dealer Malindi Rig</td>
+							
+								<td>2021-01-18</td>
+								<td>2021-01-31</td>
+								<td>29-03-2018</td>
+							
+							</tr>
+						
+							<tr>
+								<td class="table-plus">Pochi la biashara</td>
+
+								<td>2021-01-18</td>
+								<td>2021-01-31</td>
+								<td>29-03-2018</td>
+							
+								
+							</tr>
+							<tr>
+								<td class="table-plus">	Sendy Activation</td>
+
+								<td>2021-01-18</td>
+								<td>2021-01-31</td>
+								<td>29-03-2018</td>
+							
+							</tr>
+							<tr>
+								<td class="table-plus">Dummy Activation2</td>
+
+								<td>2021-01-18</td>
+								<td>2021-01-31</td>
+								<td>29-03-2018</td>
+							
+							</tr>
+							<tr>
+								<td class="table-plus">Dummy Activation2</td>
+
+								<td>2021-01-18</td>
+								<td>2021-01-31</td>
+								<td>29-03-2018</td>
+							
+							</tr>
+							
+						
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<!-- Export Datatable End -->
+		</div>
+		<div class="footer-wrap pd-20 mb-20 card-box">
+			Developed by  <a href="#" target="_blank">Shyee Designs</a>
+		</div>
+	</div>
+</div>
+
+
+	
+<!-- js -->
+<script src="vendors/scripts/core.js"></script>
+<script src="vendors/scripts/script.min.js"></script>
+<script src="vendors/scripts/process.js"></script>
+<script src="vendors/scripts/layout-settings.js"></script>
+<script src="src/plugins/apexcharts/apexcharts.min.js"></script>
+<script src="src/plugins/datatables/js/jquery.dataTables.min.js"></script>
+<script src="src/plugins/datatables/js/dataTables.bootstrap4.min.js"></script>
+<script src="src/plugins/datatables/js/dataTables.responsive.min.js"></script>
+<script src="src/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
+<script src="vendors/scripts/dashboard.js"></script>
+
+
+
+<!-- buttons for Export datatable -->
+<script src="src/plugins/datatables/js/dataTables.buttons.min.js"></script>
+<script src="src/plugins/datatables/js/buttons.bootstrap4.min.js"></script>
+<script src="src/plugins/datatables/js/buttons.print.min.js"></script>
+<script src="src/plugins/datatables/js/buttons.html5.min.js"></script>
+<script src="src/plugins/datatables/js/buttons.flash.min.js"></script>
+<script src="src/plugins/datatables/js/pdfmake.min.js"></script>
+<script src="src/plugins/datatables/js/vfs_fonts.js"></script>
+<!-- Datatable Setting js -->
+<script src="vendors/scripts/datatable-setting.js"></script></body>
+</body>
+
+
+
+
+<!--
+
+
+       <div class="section-body mt-3">
+            <div class="container-fluid">
+                <div class="row clearfix">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-md-flex justify-content-between mb-2">
+                                    <ul class="nav nav-tabs b-none">
+                                        <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#list"><i class="fa fa-list-ul"></i> Clients List</a></li>                                        
+                                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#addnew"><i class="fa fa-plus"></i> Add New</a></li>
+                                    </ul>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-4 col-sm-6">
+                                        <div class="input-group mb-1">
+                                            <input type="text" class="form-control" placeholder="Clinet Name">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-5 col-md-4 col-sm-6">
+                                        <div class="input-group mb-1">
+                                            <input type="text" class="form-control" placeholder="Project">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-md-4 col-sm-12">
+                                        <a href="javascript:void(0);" class="btn btn-primary btn-block mb-1" title="">Search</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-body">
+            <div class="container-fluid">
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="list" role="tabpanel">
+                        <div class="row clearfix">
+                            <div class="col-xl-4 col-lg-4 col-md-6">
+                                <div class="card">
+                                    <div class="card-body text-center ribbon">
+                                        <div class="ribbon-box green">New</div>
+                                        <img class="rounded-circle img-thumbnail w100" src="assets/images/sm/avatar1.jpg" alt="">
+                                        <h6 class="mt-3 mb-0">Michelle Green</h6>
+                                        <span>jason-porter@info.com</span>
+                                        <ul class="mt-3 list-unstyled d-flex justify-content-center">
+                                            <li><a class="p-3" target="_blank" href="#"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a class="p-3" target="_blank" href="#"><i class="fa fa-slack"></i></a></li>
+                                            <li><a class="p-3" target="_blank" href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        </ul>
+                                        <button class="btn btn-default btn-sm">View Profile</button>
+                                        <button class="btn btn-default btn-sm">Message</button>
+                                        <div class="row text-center mt-4">
+                                            <div class="col-6 border-right">
+                                                <label class="mb-0">Project</label>
+                                                <h4 class="font-18">07</h4>
+                                            </div>
+                                            <div class="col-6">
+                                                <label class="mb-0">Deal</label>
+                                                <h4 class="font-18">$2,510</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>    
+                            <div class="col-xl-4 col-lg-4 col-md-6">
+                                <div class="card">
+                                    <div class="card-body text-center ribbon">
+                                        <div class="ribbon-box indigo">India</div>
+                                        <img class="rounded-circle img-thumbnail w100" src="assets/images/sm/avatar3.jpg" alt="">
+                                        <h6 class="mt-3 mb-0">David Wallace</h6>
+                                        <span>Michelle@info.com</span>
+                                        <ul class="mt-3 list-unstyled d-flex justify-content-center">
+                                            <li><a class="p-3" target="_blank" href="#"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a class="p-3" target="_blank" href="#"><i class="fa fa-dribbble"></i></a></li>
+                                            <li><a class="p-3" target="_blank" href="#"><i class="fa fa-slack"></i></a></li>
+                                            <li><a class="p-3" target="_blank" href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        </ul>
+                                        <button class="btn btn-default btn-sm">View Profile</button>
+                                        <button class="btn btn-default btn-sm">Message</button>
+                                        <div class="row text-center mt-4">
+                                            <div class="col-6 border-right">
+                                                <label class="mb-0">Project</label>
+                                                <h4 class="font-18">14</h4>
+                                            </div>
+                                            <div class="col-6">
+                                                <label class="mb-0">Deal</label>
+                                                <h4 class="font-18">$7,510</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6">
+                                <div class="card">
+                                    <div class="card-body text-center">
+                                        <img class="rounded-circle img-thumbnail w100" src="assets/images/sm/avatar4.jpg" alt="">
+                                        <h6 class="mt-3 mb-0">Michelle Green</h6>
+                                        <span>jason-porter@info.com</span>
+                                        <ul class="mt-3 list-unstyled d-flex justify-content-center">
+                                            <li><a class="p-3" target="_blank" href="#"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a class="p-3" target="_blank" href="#"><i class="fa fa-slack"></i></a></li>
+                                            <li><a class="p-3" target="_blank" href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        </ul>
+                                        <button class="btn btn-default btn-sm">View Profile</button>
+                                        <button class="btn btn-default btn-sm">Message</button>
+                                        <div class="row text-center mt-4">
+                                            <div class="col-6 border-right">
+                                                <label class="mb-0">Project</label>
+                                                <h4 class="font-18">08</h4>
+                                            </div>
+                                            <div class="col-6">
+                                                <label class="mb-0">Deal</label>
+                                                <h4 class="font-18">$5,510</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>    
+                            <div class="col-xl-4 col-lg-4 col-md-6">
+                                <div class="card">
+                                    <div class="card-body text-center">
+                                        <img class="rounded-circle img-thumbnail w100" src="assets/images/sm/avatar6.jpg" alt="">
+                                        <h6 class="mt-3 mb-0">Michelle Green</h6>
+                                        <span>jason-porter@info.com</span>
+                                        <ul class="mt-3 list-unstyled d-flex justify-content-center">
+                                            <li><a class="p-3" target="_blank" href="#"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a class="p-3" target="_blank" href="#"><i class="fa fa-pinterest"></i></a></li>
+                                            <li><a class="p-3" target="_blank" href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        </ul>
+                                        <button class="btn btn-default btn-sm">View Profile</button>
+                                        <button class="btn btn-default btn-sm">Message</button>
+                                        <div class="row text-center mt-4">
+                                            <div class="col-6 border-right">
+                                                <label class="mb-0">Project</label>
+                                                <h4 class="font-18">05</h4>
+                                            </div>
+                                            <div class="col-6">
+                                                <label class="mb-0">Deal</label>
+                                                <h4 class="font-18">$1,071</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6">
+                                <div class="card">
+                                    <div class="card-body text-center ribbon">
+                                        <div class="ribbon-box orange">Gold</div>
+                                        <img class="rounded-circle img-thumbnail w100" src="assets/images/sm/avatar5.jpg" alt="">
+                                        <h6 class="mt-3 mb-0">Michelle Green</h6>
+                                        <span>jason-porter@info.com</span>
+                                        <ul class="mt-3 list-unstyled d-flex justify-content-center">
+                                            <li><a class="p-3" target="_blank" href="#"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a class="p-3" target="_blank" href="#"><i class="fa fa-slack"></i></a></li>
+                                            <li><a class="p-3" target="_blank" href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        </ul>
+                                        <button class="btn btn-default btn-sm">View Profile</button>
+                                        <button class="btn btn-default btn-sm">Message</button>
+                                        <div class="row text-center mt-4">
+                                            <div class="col-6 border-right">
+                                                <label class="mb-0">Project</label>
+                                                <h4 class="font-18">31</h4>
+                                            </div>
+                                            <div class="col-6">
+                                                <label class="mb-0">Deal</label>
+                                                <h4 class="font-18">$45,510</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6">
+                                <div class="card">
+                                    <div class="card-body text-center">
+                                        <img class="rounded-circle img-thumbnail w100" src="assets/images/sm/avatar1.jpg" alt="">
+                                        <h6 class="mt-3 mb-0">Sean Black</h6>
+                                        <span>jason-porter@info.com</span>
+                                        <ul class="mt-3 list-unstyled d-flex justify-content-center">
+                                            <li><a class="p-3" target="_blank" href="#"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a class="p-3" target="_blank" href="#"><i class="fa fa-slack"></i></a></li>
+                                            <li><a class="p-3" target="_blank" href="#"><i class="fa fa-linkedin"></i></a></li>
+                                        </ul>
+                                        <button class="btn btn-default btn-sm">View Profile</button>
+                                        <button class="btn btn-default btn-sm">Message</button>
+                                        <div class="row text-center mt-4">
+                                            <div class="col-6 border-right">
+                                                <label class="mb-0">Project</label>
+                                                <h4 class="font-18">31</h4>
+                                            </div>
+                                            <div class="col-6">
+                                                <label class="mb-0">Deal</label>
+                                                <h4 class="font-18">$45,510</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6">
+                                <div class="card">
+                                    <div class="card-body text-center ribbon">
+                                        <div class="ribbon-box pink">USA</div>
+                                        <img class="rounded-circle img-thumbnail w100" src="assets/images/sm/avatar2.jpg" alt="">
+                                        <h6 class="mt-3 mb-0">Jason Porter</h6>
+                                        <span>Carol@info.com</span>
+                                        <ul class="mt-3 list-unstyled d-flex justify-content-center">
+                                            <li><a class="p-3" target="_blank" href="#"><i class="fa fa-skype"></i></a></li>
+                                            <li><a class="p-3" target="_blank" href="#"><i class="fa fa-instagram"></i></a></li>
+                                            <li><a class="p-3" target="_blank" href="#"><i class="fa fa-dribbble"></i></a></li>
+                                        </ul>
+                                        <button class="btn btn-default btn-sm">View Profile</button>
+                                        <button class="btn btn-default btn-sm">Message</button>
+                                        <div class="row text-center mt-4">
+                                            <div class="col-6 border-right">
+                                                <label class="mb-0">Project</label>
+                                                <h4 class="font-18">22</h4>
+                                            </div>
+                                            <div class="col-6">
+                                                <label class="mb-0">Deal</label>
+                                                <h4 class="font-18">$12,510</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6">
+                                <div class="card">
+                                    <div class="card-body text-center">
+                                        <img class="rounded-circle img-thumbnail w100" src="assets/images/sm/avatar2.jpg" alt="">
+                                        <h6 class="mt-3 mb-0">David Wallace</h6>
+                                        <span>jason-porter@info.com</span>
+                                        <ul class="mt-3 list-unstyled d-flex justify-content-center">
+                                            <li><a class="p-3" target="_blank" href="#"><i class="fa fa-flickr"></i></a></li>
+                                            <li><a class="p-3" target="_blank" href="#"><i class="fa fa-dropbox"></i></a></li>
+                                            <li><a class="p-3" target="_blank" href="#"><i class="fa fa-apple"></i></a></li>
+                                            <li><a class="p-3" target="_blank" href="#"><i class="fa fa-pinterest"></i></a></li>
+                                        </ul>
+                                        <button class="btn btn-default btn-sm">View Profile</button>
+                                        <button class="btn btn-default btn-sm">Message</button>
+                                        <div class="row text-center mt-4">
+                                            <div class="col-6 border-right">
+                                                <label class="mb-0">Project</label>
+                                                <h4 class="font-18">12</h4>
+                                            </div>
+                                            <div class="col-6">
+                                                <label class="mb-0">Deal</label>
+                                                <h4 class="font-18">$1,840</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+-->
